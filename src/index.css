@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: rgb(225, 246, 248);
+  --color-secondary: rgb(110, 157, 233);
+  --color-tertiary:rgb(21, 46, 234);
+  --color-quarternary: white;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+#root {
+  width: 600px;
+  height: 600px;
+  background-color: var(--color-quarternary);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;    
+  padding-right: 10%;
+  padding-left: 5%;
+  height: 8%;
+  background: var(--color-primary);
+}
+    nav .nav-title {
+      font-size: 2.2rem;
+    }
+    nav .nav-counter {
+      position: relative;
+      display: flex;
+    }
+        .nav-counter .bag {
+          font-size: 3rem;
+        }
+        .nav-counter .nav-amount {
+          position: absolute;
+          font-size: 1.5rem;
+          top: -20%;
+          right: -40%;
+          padding: 10%;    
+          border-radius: 50%;
+          color: white;
+          background-color: var(--color-secondary);
+        }
+
+/* cart items */
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 92%;
+}
+    .cart-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90%;
+    }
+    .cart .your-bag {
+      font-size: 2rem;
+      margin: 5% auto;
+    }
+    .cart hr {
+      background: var(--color-secondary);
+      border-color: transparent;
+      border-width: 0.25px;
+      width: 40rem;
+    }
+    .cart footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+        .cart .total {
+          font-size: 1.6rem;
+          margin-top: 1%;
+        }
+        .clear-cart {
+          font-size: 1.8rem;
+          padding: 0.8rem;
+          padding-top: 1%;
+          padding-bottom: 1%;
+          margin-top: 3%;
+          border-radius: 10%;
+          color: white;
+          background: var(--color-secondary);
+        }
+
+    .cart-item {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding-right: 5%;
+      margin: 2% auto;
+    }
+        .cart-item img {
+          width: 80%;
+        }
+        .cart-item-info {          
+          line-height: 2.5rem;
+        }
+            .info-title, .info-price {
+              font-size: 1.6rem;
+            }
+            .cart-item-info button {
+              font-size: 1.6rem;
+              text-transform: capitalize;
+              padding: 0.5rem;
+              border: none;
+              border-radius: 10%;
+              color: var(--color-secondary);
+              background: none;
+            }
+        .cart-item-controls {
+          justify-self: flex-end;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+            .cart-item-controls p {
+              font-size: 1.8rem;
+            }
+            .cart-item-controls button {
+              font-size: 1.5rem;
+              padding: 10%;
+              margin-top: 10%;
+              border-radius: 10%;
+              color: white;
+              background: var(--color-secondary);
+            }
+
+
+/* @media  */
+
+@media (max-width: 1024px) {
+  #root {
+    width: 560px;
+    height: 560px;
+  }
+
+  html {
+    font-size: 7px;
+  }  
+
+}
+@media (max-width: 768px) {
+  #root {
+    width: 420px;
+    height: 420px;
+  }
+}
+@media (max-width: 576px) {
+  #root {
+    width: 350px;
+    height: 350px;
+  }
+
+  html {
+    font-size: 6px;
+  }
+}
+@media (max-width: 425px) {
+  #root {
+    width: 240px;
+    height: 240px;
+  }
+
+  html {
+    font-size: 4px;
+  }
+}
